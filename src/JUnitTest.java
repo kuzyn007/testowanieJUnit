@@ -66,6 +66,11 @@ public class JUnitTest {
 		int[] taba = {1,3,5,6};
 		int[] tabb = {2,0,10};
 		assertArrayEquals(tabTEST, test.MergeTab(taba, tabb));
+		int[] tabc = {};
+		assertArrayEquals(tabb, test.MergeTab(tabc, tabb));
+		assertArrayEquals(tabb, test.MergeTab(tabb, tabc));
+		assertArrayEquals(tabc, test.MergeTab(tabc, tabc));
+		assertArrayEquals(tabb, test.MergeTab(tabb, tabc));
 	}
 
 }
